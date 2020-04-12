@@ -1,7 +1,7 @@
-#include<iostream>
+#include"alg.h"
 
-using namespace std;
 
+void merge(int *arr, int f, int m, int l);
 
 void merge_sort(int *arr, int f, int l) {
 	

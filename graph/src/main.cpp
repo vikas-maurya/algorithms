@@ -12,4 +12,6 @@ int main() {
   G.read_graph(4, 5);
 
   G.bfs();
+  std::cout<<std::endl;
+  G.dfs();
 }

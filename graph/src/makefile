@@ -4,16 +4,16 @@ CFLAGS=-I$(IDIR)
 
 ODIR=../obj
 
-_DEPS = alg.h
+_DEPS = graph.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = quick_sort.o merge_sort.o main.o
+_OBJ = graph.o main.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-alg: $(OBJ)
+graph: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 .PHONY: clean
